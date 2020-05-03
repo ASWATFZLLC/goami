@@ -48,6 +48,11 @@ func PJSIPShowContacts(client Client, actionID string) ([]Response, error) {
 	return requestList(client, "PJSIPShowContacts", actionID, "ContactList", "ContactListComplete")
 }
 
+// PJSIPShowAors list pjsip aors.
+func PJSIPShowAors(client Client, actionID string) ([]Response, error) {
+	return requestList(client, "PJSIPShowAors", actionID, "AorList", "AorListComplete")
+}
+
 // PJSIPShowRegistrationInboundContactStatuses lists ContactStatuses for PJSIP inbound registrations.
 func PJSIPShowRegistrationInboundContactStatuses(client Client, actionID string) ([]Response, error) {
 	return requestList(client, "PJSIPShowRegistrationInboundContactStatuses", actionID, "ContactStatusDetail", "ContactStatusDetailComplete")
