@@ -63,6 +63,7 @@ func read(client Client) (Response, error) {
 }
 
 func parseResponse(input string) (Response, error) {
+	fmt.Println(input)
 	resp := make(Response)
 	lines := strings.Split(input, "\r\n")
 	for _, line := range lines {
